@@ -4,7 +4,7 @@
 
 Tools are added by publication date, newest on top. Unpublished tools are listed at the end of each section. See [Hi-C data notes](https://github.com/mdozmorov/HiC_data) and [single-cell Hi-C notes](https://github.com/mdozmorov/scHiC_notes) for more. Please, [contribute and get in touch](CONTRIBUTING.md)! See [MDnotes](https://github.com/mdozmorov/MDnotes) for other data science and genomics-related notes.
 
-# Pointers
+# Jeffrey's Pointers
 
 A lot of these tools are already dockerized! I would take a look into, at least for the Python tools: 1) making a standard "template" Docker that contains most basic packages, and then 2) installing the new tools into their own Docker image. 
 
@@ -18,7 +18,7 @@ With regard to the specific tools below, I have listed some promising ones to be
 - CNV/Translocation callers (niche): HiNT (dockerized), HiCTrans, HiCnv 
 
 
-# Table of content
+# Table of contents [Main Document Begins]
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
