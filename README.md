@@ -4,13 +4,23 @@
 
 Tools are added by publication date, newest on top. Unpublished tools are listed at the end of each section. See [Hi-C data notes](https://github.com/mdozmorov/HiC_data) and [single-cell Hi-C notes](https://github.com/mdozmorov/scHiC_notes) for more. Please, [contribute and get in touch](CONTRIBUTING.md)! See [MDnotes](https://github.com/mdozmorov/MDnotes) for other data science and genomics-related notes.
 
+# Pointers
+
+- Pipelines are complete data generation -> analysis tools -- not well-suited for an app workspace
+- Resolution improvement/simulation software is not *as* widely used
+- Broad Hi-C analysis: Fit-Hi-C, FitHiChiP 
+- Specific Hi-C analysis: Peakachu, TopDom, Arrowhead, Mustache, and dcHiC (made by me! I'd be happy to dockerize and deploy this for you) 
+- 3D feature prediction: ChromHMM is widely popular, Avocado was recently released and becoming popular too
+- CNV/Translocation callers (niche): HiNT (dockerized), HiCTrans, HiCnv 
+
+
 # Table of content
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
-- [Pipelines](#pipelines)
+- ~[Pipelines](#pipelines)~
   - [QC, quality control](#qc-quality-control)
   - [Capture-C](#capture-c)
     - [Capture-C peaks](#capture-c-peaks)
@@ -52,6 +62,8 @@ Tools are added by publication date, newest on top. Unpublished tools are listed
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Pipelines
+
+> These are not so much analysis tools as they are full suites for data processing, cleaning, and analysis. 
 
 - <a name="fan-c">[FAN-C](https://github.com/vaquerizaslab/fanc)</a> - Python pipeline for Hi-C processing. Input - raw FASTQ (aligned using BWA or Bowtie2, artifact filtering) or pre-aligned BAMs. KR or ICE normalization. Analysis and Visualization (contact distance decay, A/B compartment detection, TAD/loop detection, Average TAD/loop profiles, saddle plots, triangular heatmaps, comparison of two heatmaps). Automatic or modular. Compatible with .cool and .hic formats. [Tweet1](https://twitter.com/vaquerizas_lab/status/1225011187668209664?s=20), [Tweet2](https://twitter.com/vaquerizasjm/status/1339937903473025027?s=20). [Table 1](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02215-9/tables/1) - detailed comparison of 13 Hi-C processing tools <details>
     <summary>Paper</summary>
