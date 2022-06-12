@@ -6,11 +6,15 @@ Tools are added by publication date, newest on top. Unpublished tools are listed
 
 # Pointers
 
-- Pipelines are complete data generation -> analysis tools -- not well-suited for an app workspace
-- Resolution improvement/simulation software is not *as* widely used
-- Broad Hi-C analysis: Fit-Hi-C, FitHiChiP 
-- Specific Hi-C analysis: Peakachu, TopDom, Arrowhead, Mustache, and dcHiC (made by me! I'd be happy to dockerize and deploy this for you) 
-- 3D feature prediction: ChromHMM is widely popular, Avocado was recently released and becoming popular too
+A lot of these tools are already dockerized! I would take a look into, at least for the Python tools: 1) making a standard "template" Docker that contains most basic packages, and then 2) installing the new tools into their own Docker image. 
+
+With regard to the specific tools below, I have listed some promising ones to begin with and areas to stray away from: 
+
+- I would not recommend automating pipelines, resolution improvement, normalization, or reproducibility methods. These are data wrangling methods, and not analysis tools. They don't fit much into Superbio's thesis. 
+- From there, we have a few broad elements Hi-C analysis: significant interaction callers, loop callers, TAD callers, and compartment callers. 
+  - Compartments are definetely the easiest tools to use so demand might be low. I would stray away from implementing these, although I am happy to deploy the [application](https://github.com/ay-lab/dcHiC) I developed for use in Superbio's app store.
+  - TAD, loop, and significant interaction callers *are* useful to add. I would recommend some simple Python tools like Mustache, Peakachu, and Fit-Hi-C. 
+- 3D feature prediction: ChromHMM is widely popular, [Avocado](https://github.com/jmschrei/avocado) was recently released and becoming popular too. 
 - CNV/Translocation callers (niche): HiNT (dockerized), HiCTrans, HiCnv 
 
 
@@ -26,26 +30,27 @@ Tools are added by publication date, newest on top. Unpublished tools are listed
     - [Capture-C peaks](#capture-c-peaks)
   - [HiChIP](#hichip)
   - [4C](#4c)
-- [Resolution improvement](#resolution-improvement)
+- ~[Resolution improvement](#resolution-improvement)~
   - [Simulation](#simulation)
-- [Normalization](#normalization)
+- ~[Normalization](#normalization)~
   - [CNV-aware normalization](#cnv-aware-normalization)
-- [Reproducibility](#reproducibility)
-- [AB compartments](#ab-compartments)
-- [Peak/Loop callers](#peak-loop-callers)
-- [Differential interactions](#differential-interactions)
-- [TAD callers](#tad-callers)
+- ~[Reproducibility](#reproducibility)~
+- ~[AB compartments](#ab-compartments)~
+  - Except maybe dcHiC, which I (Jeffrey) can Dockerize for you 
+- **[Peak/Loop callers](#peak-loop-callers)**
+- **[Differential interactions](#differential-interactions)**
+- **[TAD callers](#tad-callers)**
   - [TAD detection, benchmarking](#tad-detection-benchmarking)
   - [Architectural stripes](#architectural-stripes)
   - [Differential/timecourse TAD analysis](#differential-timecourse-tad-analysis)
-- [Prediction of 3D features](#prediction-of-3d-features)
-- [SNP-oriented](#snp-oriented)
-- [CNV and Structural variant detection](#cnv-and-structural-variant-detection)
-- [Visualization](#visualization)
-- [De novo genome scaffolding](#de-novo-genome-scaffolding)
-- [3D modeling](#3d-modeling)
-- [Deconvolution](#deconvolution)
-- [Haplotype phasing](#haplotype-phasing)
+- **[Prediction of 3D features](#prediction-of-3d-features)**
+- ~[SNP-oriented](#snp-oriented)~
+- **[CNV and Structural variant detection](#cnv-and-structural-variant-detection)**
+- ~[Visualization](#visualization)~
+- ~[De novo genome scaffolding](#de-novo-genome-scaffolding)~
+- **[3D modeling](#3d-modeling)**
+- ~[Deconvolution](#deconvolution)~
+- ~[Haplotype phasing](#haplotype-phasing)~
 - [Papers](#papers)
   - [Methodological Reviews](#methodological-reviews)
   - [General Reviews](#general-reviews)
